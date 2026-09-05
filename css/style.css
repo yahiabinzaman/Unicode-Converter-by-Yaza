@@ -1,0 +1,254 @@
+/* Native Adobe Illustrator Panel Theme */
+:root {
+    --ai-bg-window: #323232;
+    --ai-bg-panel: #262626;
+    --ai-bg-input: #1e1e1e;
+    --ai-bg-hover: #3d3d3d;
+    --ai-border: #464646;
+    --ai-border-subtle: #3a3a3a;
+    --ai-accent-blue: #1473e6;
+    --ai-accent-hover: #0d66d0;
+    --ai-text-primary: #e6e6e6;
+    --ai-text-secondary: #adadad;
+    --ai-text-disabled: #6e6e6e;
+    --ai-success: #2d9d78;
+    --ai-error: #e34850;
+    --ai-font: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: var(--ai-font);
+}
+
+body {
+    background-color: var(--ai-bg-window);
+    color: var(--ai-text-primary);
+    font-size: 11px;
+    line-height: 1.35;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--ai-border);
+    margin-bottom: 10px;
+}
+
+.header-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+}
+
+.header-badge {
+    background: #1e1e1e;
+    border: 1px solid var(--ai-border);
+    color: var(--ai-text-secondary);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 9.5px;
+    font-weight: 600;
+}
+
+/* Sections / Panels */
+.section {
+    background: var(--ai-bg-panel);
+    border: 1px solid var(--ai-border);
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+}
+
+.section-label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--ai-text-secondary);
+    margin-bottom: 6px;
+    letter-spacing: 0.4px;
+}
+
+/* Option Grids & Radios */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--ai-bg-window);
+    border: 1px solid var(--ai-border-subtle);
+    padding: 5px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.12s, border-color 0.12s;
+}
+
+.radio-item:hover {
+    background: var(--ai-bg-hover);
+    border-color: var(--ai-border);
+}
+
+.radio-item.active {
+    border-color: var(--ai-accent-blue);
+    background: #1a2d42;
+}
+
+.radio-item input[type="radio"] {
+    accent-color: var(--ai-accent-blue);
+    cursor: pointer;
+}
+
+.radio-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-text .main-text {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--ai-text-primary);
+}
+
+.radio-text .sub-text {
+    font-size: 9px;
+    color: var(--ai-text-secondary);
+}
+
+/* Select Dropdown */
+.select-box {
+    width: 100%;
+    background: var(--ai-bg-input);
+    border: 1px solid var(--ai-border);
+    color: var(--ai-text-primary);
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    outline: none;
+    cursor: pointer;
+}
+
+.select-box:focus {
+    border-color: var(--ai-accent-blue);
+}
+
+/* Refinement List */
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.feature-tag {
+    background: #1e1e1e;
+    border: 1px solid var(--ai-border-subtle);
+    color: var(--ai-text-secondary);
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-size: 9.5px;
+}
+
+.feature-tag::before {
+    content: "• ";
+    color: #2d9d78;
+    font-weight: bold;
+}
+
+/* Primary Convert Button */
+.btn-primary {
+    width: 100%;
+    background: var(--ai-accent-blue);
+    color: #ffffff;
+    border: 1px solid #0d66d0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.12s, border-color 0.12s;
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+
+.btn-primary:hover {
+    background: var(--ai-accent-hover);
+    border-color: #0b55b0;
+}
+
+.btn-primary:active {
+    background: #094794;
+}
+
+.btn-primary:disabled {
+    background: #3a3a3a;
+    border-color: #4a4a4a;
+    color: #777777;
+    cursor: not-allowed;
+}
+
+/* Status Alert Box */
+.status-msg {
+    display: none;
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-size: 10.5px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.status-msg.success {
+    display: block;
+    background: rgba(45, 157, 120, 0.18);
+    border: 1px solid #2d9d78;
+    color: #48c79a;
+}
+
+.status-msg.error {
+    display: block;
+    background: rgba(227, 72, 80, 0.18);
+    border: 1px solid #e34850;
+    color: #ff757b;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8px;
+    border-top: 1px solid var(--ai-border);
+    margin-top: 8px;
+}
+
+.author {
+    font-size: 10px;
+    color: var(--ai-text-secondary);
+}
+
+.author a {
+    color: #70b0ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.author a:hover {
+    text-decoration: underline;
+}
+
+.version {
+    font-size: 9.5px;
+    color: var(--ai-text-disabled);
+}

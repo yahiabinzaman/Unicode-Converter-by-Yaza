@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter by Yaza</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-title">Converter by Yaza</div>
+        <div class="header-badge">Bijoy to Unicode</div>
+    </div>
+
+    <!-- 1. Scope -->
+    <div class="section">
+        <div class="section-label">1. Target Scope</div>
+        <div class="grid-2">
+            <label class="radio-item active" id="lblScopeSel">
+                <input type="radio" name="scope" value="selected" checked>
+                <div class="radio-text">
+                    <span class="main-text">Selected Only</span>
+                    <span class="sub-text">Current selection</span>
+                </div>
+            </label>
+            <label class="radio-item" id="lblScopeAll">
+                <input type="radio" name="scope" value="all">
+                <div class="radio-text">
+                    <span class="main-text">Entire Document</span>
+                    <span class="sub-text">All 400+ pages</span>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <!-- 2. Engine -->
+    <div class="section">
+        <div class="section-label">2. ANSI / Engine Version</div>
+        <div class="grid-2">
+            <label class="radio-item active" id="lblVerAuto">
+                <input type="radio" name="version" value="auto" checked>
+                <div class="radio-text">
+                    <span class="main-text">Auto-Detect (Best)</span>
+                    <span class="sub-text">V1, V2, V3 + AI Refine</span>
+                </div>
+            </label>
+            <label class="radio-item" id="lblVerV1">
+                <input type="radio" name="version" value="v1">
+                <div class="radio-text">
+                    <span class="main-text">ANSI V1</span>
+                    <span class="sub-text">Classic SutonnyMJ</span>
+                </div>
+            </label>
+            <label class="radio-item" id="lblVerV2">
+                <input type="radio" name="version" value="v2">
+                <div class="radio-text">
+                    <span class="main-text">ANSI V2</span>
+                    <span class="sub-text">Bijoy 52 / Newer ANSI</span>
+                </div>
+            </label>
+            <label class="radio-item" id="lblVerV3">
+                <input type="radio" name="version" value="v3">
+                <div class="radio-text">
+                    <span class="main-text">ANSI V3</span>
+                    <span class="sub-text">Okkhor / Lipighor</span>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <!-- 3. Font -->
+    <div class="section">
+        <div class="section-label">3. Target Font</div>
+        <select id="targetFontSelect" class="select-box">
+            <option value="Bornomala-Regular" selected>Bornomala (Unicode Regular)</option>
+            <option value="Bornomala-Bold">Bornomala Bold (Unicode)</option>
+            <option value="Kalpurush">Kalpurush (Unicode)</option>
+            <option value="SiyamRupali">Siyam Rupali (Unicode)</option>
+            <option value="SolaimanLipi">SolaimanLipi (Unicode)</option>
+            <option value="Nikosh">Nikosh (Unicode)</option>
+            <option value="AdorshoLipi">AdorshoLipi (Unicode)</option>
+            <option value="NotoSerifBengali-Regular">Noto Serif Bengali (Unicode)</option>
+            <option value="NotoSansBengali-Regular">Noto Sans Bengali (Unicode)</option>
+            <option value="keep">Keep Current Font (No Change)</option>
+        </select>
+    </div>
+
+    <!-- 4. Refinements info -->
+    <div class="section">
+        <div class="section-label">Active Typo &amp; Ligature Refinements</div>
+        <div class="feature-list">
+            <span class="feature-tag">No Broken Ligatures</span>
+            <span class="feature-tag">No Dotted Circles</span>
+            <span class="feature-tag">Toiri / Beshi Auto-Fix</span>
+            <span class="feature-tag">Ka'ba &amp; Du'a Quotes</span>
+            <span class="feature-tag">Gombuz / Obolombon Fix</span>
+            <span class="feature-tag">Attiyo / Swazon Fix</span>
+            <span class="feature-tag">Khanda-Ta (ৎ) Fix</span>
+        </div>
+    </div>
+
+    <!-- Convert Button -->
+    <button id="btnConvert" class="btn-primary">Convert Document</button>
+
+    <!-- Status Message -->
+    <div id="statusMsg" class="status-msg"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="author">
+            <a href="#" id="authorLink" title="Visit GitHub Profile">Thanks to Legend Yahia Bin Zaman</a>
+        </div>
+        <div class="version">v1.0.0</div>
+    </div>
+
+    <script src="js/CSInterface.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0" ExtensionBundleId="com.yaza.converter" ExtensionBundleVersion="1.0.0"
+    ExtensionBundleName="Converter by Yaza" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ExtensionList>
+        <Extension Id="com.yaza.converter.panel" Version="1.0.0" />
+    </ExtensionList>
+    <ExecutionEnvironment>
+        <HostList>
+            <Host Name="ILST" Version="[18.0,99.9]" />
+        </HostList>
+        <LocaleList>
+            <Locale Code="All" />
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="9.0" />
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <Extension Id="com.yaza.converter.panel">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./index.html</MainPath>
+                    <ScriptPath>./jsx/hostscript.jsx</ScriptPath>
+                    <CEFCommandLine>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>Converter by Yaza</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>580</Height>
+                            <Width>440</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>400</Height>
+                            <Width>360</Width>
+                        </MinSize>
+                        <MaxSize>
+                            <Height>1400</Height>
+                            <Width>900</Width>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./icons/icon-normal.png</Icon>
+                        <Icon Type="RollOver">./icons/icon-rollover.png</Icon>
+                        <Icon Type="Disabled">./icons/icon-disabled.png</Icon>
+                        <Icon Type="DarkNormal">./icons/icon-dark.png</Icon>
+                        <Icon Type="DarkRollOver">./icons/icon-dark-hover.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>
